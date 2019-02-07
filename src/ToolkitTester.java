@@ -7,7 +7,7 @@ public class ToolkitTester {
 		int[][] a = matrixBuilder(console, 1);
 		int[][] b = matrixBuilder(console, 2);
 		System.out.println();
-		MatrixCalculator.addMatrices(a, b);
+		MatrixCalculator.multiplyMatrices(a, b);
 	}
 	
 	/**
