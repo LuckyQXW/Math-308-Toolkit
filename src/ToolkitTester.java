@@ -6,8 +6,22 @@ public class ToolkitTester {
 		System.out.println("Welcome to matrix calculator!");
 		int[][] a = matrixBuilder(console, 1);
 		int[][] b = matrixBuilder(console, 2);
+		System.out.print("What operation? (1 for a + b, 2 for a - b, 3 for a * b) ");
+		int[][] c;
+		switch(console.nextInt()) {
+		case 1: 
+			c = MatrixCalculator.addMatrices(a, b);
+			break;
+		case 2:
+			c = MatrixCalculator.subtractMatrices(a, b);
+			break;
+		case 3: 
+			c = MatrixCalculator.multiplyMatrices(a, b);
+			break;
+		default: 
+			throw new IllegalArgumentException("Must choose the given options");
+		}
 		System.out.println();
-		MatrixCalculator.multiplyMatrices(a, b);
 	}
 	
 	/**
