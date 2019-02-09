@@ -11,27 +11,10 @@ public class Matrix {
 	private int[][] content;
 
 	/**
-	 * Sets the dimension of the matrix
-	 * @param r Number of rows in a matrix
-	 * @param c Number of columns in a matrix
-	 */
-	public void setMatrixInfo(int r, int c) {
-		setMatrixInfo(r, c, null);
-	}
-
-	/**
-	 * Sets the content of the matrix
+	 * Constructs a matrix using the given row, column, and content
 	 * @param content A 2D array storing values in a matrix
 	 */
-	public void setMatrixInfo(int[][] content) {
-		setMatrixInfo(this.rows, this.cols, content);
-	}
-
-	/**
-	 * Sets the dimensions of the matrix
-	 * @param content A 2D array storing values in a matrix
-	 */
-	public void setMatrixInfo(int r, int c, int[][] content) {
+	public Matrix(int r, int c, int[][] content) {
 		checkMatrixInfo(r, c, content);
 		rows = r;
 		cols = c;
@@ -57,6 +40,22 @@ public class Matrix {
 	 */
 	public int[][] getContent() {
 		return content;
+	}
+	
+	/**
+	 * Gets the number of rows in the matrix
+	 * @return rows
+	 */
+	public int getRows() {
+		return rows;
+	}
+	
+	/**
+	 * Gets the number of columns in the matrix
+	 * @return cols
+	 */
+	public int getColumns() {
+		return cols;
 	}
 	
 	/**

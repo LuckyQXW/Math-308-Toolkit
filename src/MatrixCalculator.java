@@ -124,6 +124,22 @@ public class MatrixCalculator {
 	}
 	
 	/**
+	 * Returns a String representation of the given matrix, with each row on a new line 
+	 * and elements in the row separated by a tab
+	 * @param c The matrix that needs to be printed
+	 */
+	public static String matrixToString(int[][] c) {
+		String result = "";
+		for(int i = 0; i < c.length; i++) {
+			for(int j = 0; j < c[0].length; j++) {
+				result += c[i][j] + "\t";
+			}
+			result += "\n";
+		}
+		return result;
+	}
+	
+	/**
 	 * Check if the given two matrices are nonempty and have the same dimension, 
 	 * throws IllegalArgumentException otherwise
 	 * @param a The first matrix

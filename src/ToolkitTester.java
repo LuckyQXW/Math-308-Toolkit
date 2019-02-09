@@ -1,5 +1,10 @@
 import java.util.*;
 
+/**
+ * Used for testing functions in the MatrixCalculator
+ * @author Wen Qiu
+ *
+ */
 public class ToolkitTester {
 	public static void main(String[] args) {
 		Scanner console = new Scanner(System.in);
