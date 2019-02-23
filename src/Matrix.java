@@ -15,7 +15,7 @@ public class Matrix {
 	 * @param content A 2D array storing values in a matrix
 	 */
 	public Matrix(int r, int c, int[][] content) {
-		checkMatrixInfo(r, c, content);
+		// checkMatrixInfo(r, c, content);
 		rows = r;
 		cols = c;
 		this.content = content;

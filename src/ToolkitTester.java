@@ -10,6 +10,7 @@ public class ToolkitTester {
 		Scanner console = new Scanner(System.in);
 		System.out.println("Welcome to matrix calculator!");
 		int[][] a = matrixBuilder(console, 1);
+		
 		int[][] b = matrixBuilder(console, 2);
 		System.out.print("What operation? (1 for a + b, 2 for a - b, 3 for a * b) ");
 		int[][] c;
@@ -27,6 +28,7 @@ public class ToolkitTester {
 			throw new IllegalArgumentException("Must choose the given options");
 		}
 		System.out.println();
+		
 	}
 	
 	/**

@@ -59,11 +59,15 @@ public class MatrixCalculatorGUI {
 		JRadioButton multiplyOption = new JRadioButton("A * B");
 		multiplyOption.setBounds(rightColX, 80, 80, 20);
 		f.add(multiplyOption);
-
+		JRadioButton determinantOption = new JRadioButton("det(A)");
+		determinantOption.setBounds(rightColX + 80, 40, 80, 20);
+		f.add(determinantOption);
+		
 		ButtonGroup options = new ButtonGroup();
 		options.add(addOption);
 		options.add(subtractOption);
 		options.add(multiplyOption);
+		options.add(determinantOption);
 
 		/* Set contents for the matrices. Currently each matrix is given a max size
 		 * to begin with, since changing the layout in runtime requires a lot of work
@@ -145,8 +149,13 @@ public class MatrixCalculatorGUI {
 					} else if (multiplyOption.isSelected()) {
 						result = MatrixCalculator.multiplyMatrices(a, b);
 					}
+					
 					// Display the answer
-					answerContent.setText(MatrixCalculator.matrixToString(result));
+					if(!determinantOption.isSelected()) {
+						answerContent.setText(MatrixCalculator.matrixToString(result));
+					} else {
+						answerContent.setText("" + MatrixCalculator.getDeterminant(a));
+					}
 				} catch (Exception exception) {
 					answerContent.setText("Invalid entries detected\n" + 
 							"Double check if dimensions and corresponding entries are specified\n" +
